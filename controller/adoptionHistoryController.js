@@ -1,5 +1,6 @@
 const {adoptionHistory} = require("../models")
 const {v4:uuidv4} = require("uuid")
+
 const emailError = "email is already in use"
 
 exports.createAdoptionHistory = async(req, res)=> {

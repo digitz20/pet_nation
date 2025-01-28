@@ -2,10 +2,6 @@ const { pet } = require("../models")
 const {v4:uuidv4} = require("uuid")
 
 
-const tagError = "tag number is in use"
-
-
-
 exports.createPet = async(req, res) => {
     try {
         const petData = {
@@ -14,11 +10,9 @@ exports.createPet = async(req, res) => {
             breed: req.body.breed,
             age: req.body.age,
             health: req.body.health,
-            tagNumber: req.body.tagNumber
+    
         }
     
-      
-
         if(!petData) {
             return res.status(500).json({message: 'pet is not found'})
         }
@@ -28,7 +22,7 @@ exports.createPet = async(req, res) => {
 
         res.status(201).json({message: 'pet is successfully created', data: newPetData})
     } catch (error) {
-        res.status(500).json({message: 'Error creating pet', error:(tagError)})
+        res.status(500).json({message: 'Error creating pet', error:error.message})
     }
 }
 
@@ -45,7 +39,7 @@ exports.bulkpets = async(req, res)=> {
         res.status(201).json({message: 'multiple pets successfully created', data: myPets})
 
     } catch (error) {
-        res.status(500).json({message: 'Error creating pet', error:(tagError)})
+        res.status(500).json({message: 'Error creating pet', error:error.message})
     }
 
 }
@@ -101,7 +95,6 @@ exports.updatePet = async(req , res) => {
         breed: req.body.breed,
         age: req.body.age,
         health: req.body.health,
-        tagNumber: req.body.tagNumber
   })
        res.status(200).json({message: `pet updated`, data:newPet})
     } catch (error) {

@@ -1,0 +1,1 @@
+npx sequelize-cli model:generate --name pet --attributes species:string,breed:string,age:string,health:string

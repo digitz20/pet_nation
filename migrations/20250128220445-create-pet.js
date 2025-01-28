@@ -20,10 +20,6 @@ module.exports = {
       health: {
         type: Sequelize.STRING
       },
-      tagNumber: {
-        type: Sequelize.INTEGER,
-        unique: true
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
