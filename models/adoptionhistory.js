@@ -17,10 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   adoptionHistory.init({
-    petId: {type : DataTypes.STRING, references:{model:"pet", key: "id"},
-    // onUpdate: "CASCADE",
-    // onDelete: "CASCADE"},
-  },
+    petId: {type : DataTypes.STRING,references:{model:"pet", key: "id"}},
     adopterName: DataTypes.STRING,
     email: DataTypes.STRING,
     adoptionDate: DataTypes.DATE

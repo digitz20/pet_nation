@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       pet.associate=(models)=>{
-        pet.hasOne(models.adoptionHistory,{foreignKey:"petId",as:"pet"})
+        pet.hasOne(models.adoptionHistory,{foreignKey:"petId",as:"adoptionHistory"})
       }
       // define association here
     }

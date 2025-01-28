@@ -16,7 +16,7 @@ module.exports = {
       },
       email: {
         type: Sequelize.STRING,
-        unique:true
+        unique: true
       },
       adoptionDate: {
         type: Sequelize.DATE
