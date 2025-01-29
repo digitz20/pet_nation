@@ -115,7 +115,7 @@ exports.deleteAdoptionName = async (req, res) => {
         res.status(200).json({message: `adoptor name successfully deleted`, data: deleteName})
         
     } catch (error) {
-        res.status(500).json({error:error.message})
+        res.status(500).json({error: "Adoptor name already deleted"})
     }
 }
 
