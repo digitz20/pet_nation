@@ -110,7 +110,7 @@ exports.deleteAdoptionName = async (req, res) => {
         if(!deleteName) {
             return res.status(404).json('adoptor name not found')
         }
-          await deleteName.destroy()
+         deleteName.destroy()
 
         res.status(200).json({message: `adoptor name successfully deleted`, data: deleteName})
         
