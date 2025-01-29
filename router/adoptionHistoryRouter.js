@@ -3,7 +3,7 @@ const {createAdoptionHistory, bulkAdoptor, getallhistory, getOneAdoptor, updatea
 
 const historyRouter = require("express").Router()
 
-historyRouter.post("/createhistory", createAdoptionHistory)
+historyRouter.post("/createhistory/:id", createAdoptionHistory)
 
 historyRouter.post("/createbulkadoptor", bulkAdoptor)
 
