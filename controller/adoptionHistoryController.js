@@ -30,7 +30,7 @@ exports.bulkAdoptor = async(req, res)=> {
     try {
         
         const myBulkAdoptor = req.body
-         myBulkAdoptor.map((e) => { return e.id == uuidv4()})
+         myBulkAdoptor.map((e) => { return e.id = uuidv4()})
 
         const myAdoptor = await adoptionHistory.bulkCreate(myBulkAdoptor, {validate:true})
 
