@@ -8,7 +8,7 @@ exports.createAdoptionHistory = async(req, res)=> {
         
         const historyData = {
             id: uuidv4(),
-            petId: req.body.petId,
+            // petId: req.body.petId,
             adopterName: req.body.adopterName,
             email: req.body.email,
             adoptionDate:req.body.adoptionDate
