@@ -87,7 +87,7 @@ exports.updateaAdoptorHistory = async (req , res) => {
         }
   
          const newAdoptorHistory = await updateAdoptor.update({
-            petId: req.body.petId,
+            // petId: req.body.petId,
             adopterName: req.body.adopterName,
             email: req.body.email,
             adoptionDate:req.body.adoptionDate
