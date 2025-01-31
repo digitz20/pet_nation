@@ -97,6 +97,7 @@ exports.updatePet = async(req , res) => {
         breed: req.body.breed,
         age: req.body.age,
         health: req.body.health,
+        image : req.body.image
   })
        res.status(200).json({message: `pet updated`, data:newPet})
     } catch (error) {
