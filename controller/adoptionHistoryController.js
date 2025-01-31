@@ -1,7 +1,7 @@
 const {adoptionHistory} = require("../models")
 const {v4:uuidv4} = require("uuid")
 
-const emailError = "email is already in use"
+
 
 exports.createAdoptionHistory = async(req, res)=> {
     try {
@@ -19,7 +19,7 @@ exports.createAdoptionHistory = async(req, res)=> {
         res.status(201).json({message: `new adoption details added successfully`, data: newHistory})
 
     } catch (error) {
-        res.status(500).json({message: 'Error creating adoption details ', error:(emailError)})
+        res.status(500).json({message: 'Error creating adoption details ', error:error.message})
     }
 }
 
@@ -37,7 +37,7 @@ exports.bulkAdoptor = async(req, res)=> {
         res.status(201).json({message: 'multiple adoptors successfully created', data: myAdoptor})
 
     } catch (error) {
-        res.status(500).json({message: 'Error creating adoptors', error:(emailError)})
+        res.status(500).json({message: 'Error creating adoptors', error:error.message})
     }
 
 }
@@ -95,7 +95,7 @@ exports.updateaAdoptorHistory = async (req , res) => {
          res.status(200).json({message: `adoptor name successfully updated`, data: newAdoptorHistory})
     } catch (error) {
         
-        res.status(500).json({error:(emailError)})
+        res.status(500).json({error:error.message})
     }
 }
 
