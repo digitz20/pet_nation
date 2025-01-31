@@ -10,6 +10,7 @@ exports.createPet = async(req, res) => {
             breed: req.body.breed,
             age: req.body.age,
             health: req.body.health,
+            image : req.body.image
             
     
         }
